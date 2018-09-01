@@ -38,7 +38,7 @@
         {% block navigation %}
         <nav class="navbar navbar-expand-lg fixed-top bg-black" id="mainNav">
             <div class="container">
-                <a class="navbar-brand_custom js-scroll-trigger text-white" href="#">Paranoia Slappys</a>
+                <a class="navbar-brand_custom js-scroll-trigger text-white" href="{% url 'toppage:top_page' %}">Paranoia Slappys</a>
                 <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
                 Menu
                 <i class="fas fa-bars"></i>
@@ -46,7 +46,7 @@
                 <div class="collapse navbar-collapse" id="navbarResponsive">
                     <ul class="navbar-nav ml-auto">
                         <li class="nav-item">
-                            <a class="nav-link_custom js-scroll-trigger" href="blog_top.html"><i class="fas fa-pen">Blog</i></a>
+                            <a class="nav-link_custom js-scroll-trigger" href="{% url 'blog:blog_top' %}"><i class="fas fa-pen">Blog</i></a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link_custom js-scroll-trigger" href="gallery.html"><i class="fas fa-camera">Gallery</i></a>
