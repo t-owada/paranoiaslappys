@@ -1,0 +1,87 @@
+{% load i18n static %}
+<!DOCTYPE html>{% get_current_language as LANGUAGE_CODE %}
+<html lang="{{ LANGUAGE_CODE|default:"en-us" }}">
+
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta name="description" content="Skateboarding">
+        <meta name="author" content="Paranoia Slappys">
+
+        <title>
+            {% block title %}
+                Paranoia Slappys
+            {% endblock %}
+        </title>
+
+        <!-- Bootstrap core CSS -->
+        <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" rel="stylesheet">
+
+        <!-- Custom fonts for this template -->
+        <link href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Varela+Round" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
+
+        <!-- Custom styles for this template -->
+        <link href="{% static 'paranoiaslappys/css/grayscale.min.css' %}" rel="stylesheet">
+
+        <!-- Custom style-->
+        <link href="{% static 'paranoiaslappys/css/custom.css' %}" rel="stylesheet">
+
+        {% block extra_css %}{% endblock %}
+
+    </head>
+
+    <body class="body-font">
+
+        <!-- Navigation -->
+        {% block navigation %}
+        <nav class="navbar navbar-expand-lg fixed-top bg-black" id="mainNav">
+            <div class="container">
+                <a class="navbar-brand_custom js-scroll-trigger text-white" href="#">Paranoia Slappys</a>
+                <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                Menu
+                <i class="fas fa-bars"></i>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarResponsive">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a class="nav-link_custom js-scroll-trigger" href="blog_top.html"><i class="fas fa-pen">Blog</i></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link_custom js-scroll-trigger" href="gallery.html"><i class="fas fa-camera">Gallery</i></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link_custom js-scroll-trigger" href="#"><i class="fas fa-briefcase">Products</i></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        {% endblock navigation %}
+
+        {% block content %}{% endblock %}
+
+        <!-- Footer -->
+        {% block footer %}
+        <footer class="bg-black small text-center text-white-50">
+          <div class="container">
+            Copyright &copy; Paranoia Slappys 2018
+          </div>
+        </footer>
+        {% endblock %}
+
+        <!-- Bootstrap core JavaScript -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+
+        <!-- Plugin JavaScript -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
+
+        <!-- Custom scripts for this template -->
+        <script src="{% static 'paranoiaslappys/js/grayscale.min.js' %}"></script>
+
+        {% block extra_js %}{% endblock %}
+
+    </body>
+</html>

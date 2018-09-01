@@ -1,0 +1,186 @@
+body.body-font {
+  font-family: 'Nunito', 'Hiragino Kaku Gothic ProN', 'Meiryo';
+  letter-spacing: 0.0625em;
+}
+
+#mainNav .navbar-brand_custom{
+    font-family: 'Impact';
+    font-size: 2.0rem;
+    font-weight: 400;
+    padding: .9rem 0;
+    /*-webkit-text-stroke: 2px #000;*/
+}
+
+#mainNav .nav-item_custom:hover {
+    color: #0d0d0d;
+    outline: none;
+    background-color: transparent;
+}
+
+#mainNav .nav-link_custom {
+    transition: none;
+    padding: 2rem 1.5rem;
+    color: white;
+}
+
+#mainNav .nav-link_custom:hover {
+    transition: none;
+    padding: 2rem 1.5rem;
+    color: gray;
+}
+
+#mainNav .navbar-toggler_custom {
+    font-size: 80%;
+    padding: 0.75rem;
+    color: white;
+    border: 1px solid white;
+}
+
+.masthead_top-page{
+  position: relative;
+  width: 100%;
+  height: auto;
+  min-height: 35rem;
+  padding: 15rem 0;
+  background: linear-gradient(to bottom, rgba(22, 22, 22, 0.1) 0%, rgba(22, 22, 22, 0.5) 75%, #161616 100%),
+                url("/static/paranoiaslappys/img/top_page/top_page_back_ground.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  background-size: cover;
+}
+
+.masthead_top-page h1 {
+  font-family: 'Impact';
+  font-size: 3.0rem;
+  line-height: 2.5rem;
+  letter-spacing: 0.4rem;
+  color: white;
+  line-height: 4.0rem;
+  /*background: -webkit-linear-gradient(rgba(255, 255, 255, 2), rgba(255, 255, 255, 0));*/
+  /*-webkit-text-fill-color: transparent;*/
+  /*-webkit-background-clip: text;*/
+}
+
+.masthead_top-page p {
+  font-family: 'Times New Roman';
+  max-width: 20rem;
+  font-size: 1rem;
+}
+
+.btn-custom {
+  background-color:#212121;
+}
+
+.btn-custom:hover {
+  background-color: #3E4551;
+}
+
+.btn-custom:focus {
+  background-color: #3E4551;
+  color: white;
+}
+
+
+footer.top-page {
+  padding: 5rem 0;
+  text-align: center;
+}
+
+a.icon_custom {
+  color: #bdbdbd;
+}
+
+a.icon_custom:focus, a:hover {
+  text-decoration: none;
+  color: #4B515D;
+}
+
+a.icon_custom2 {
+  color: #212121;
+}
+
+a.icon_custom2:focus, a:hover {
+  text-decoration: none;
+  color: #4B515D;
+}
+
+/*Page Top*/
+.page-top{
+  font-size: 35px;
+  font-weight: bold;
+  margin-top: 30px;
+  margin-bottom: 5px;
+}
+
+
+/* Blog top parts */
+.post-preview > a {
+  color: #212529;
+}
+
+.post-preview > a:focus, .post-preview > a:hover {
+  text-decoration: none;
+  color: gray;
+}
+
+.post-preview > a > .post-title {
+  font-size: 30px;
+  margin-top: 30px;
+  margin-bottom: 10px;
+}
+
+.post-preview > a > .post-subtitle {
+  font-weight: 300;
+  margin: 0 0 10px;
+}
+
+.post-preview > .post-meta {
+  font-size: 18px;
+  font-style: italic;
+  margin-top: 0;
+  color: #868e96;
+}
+
+.post-preview > .post-meta > a {
+  text-decoration: none;
+  color: #212529;
+}
+
+.post-preview > .post-meta > a:focus, .post-preview > .post-meta > a:hover {
+  text-decoration: underline;
+  color: gray;
+}
+
+/*blog post parts*/
+.blog_title {
+  position: relative;
+  width: 100%;
+  height: auto;
+  min-height: 4rem;
+  margin-top: 8rem;
+  margin-bottom: 2rem;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+}
+
+/*Gallery Modal Window*/
+.modal-middle {
+	margin: 5% auto;
+}
+
+.modal-img_footer {
+	padding: .5em;
+	text-align: center;
+}
+
+.modal-body_custom{
+    position: relative;
+    display: inline-block;
+}
+
+/*goods parts*/
+img.card-img_custom{
+    height: 200px;
+}
