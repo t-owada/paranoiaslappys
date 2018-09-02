@@ -1,7 +1,5 @@
-from django.shortcuts import render
-from django.http import HttpResponse
 from .models import BlogData
-from  django.views import generic
+from django.views import generic
 
 
 class BlogTopView(generic.ListView):
