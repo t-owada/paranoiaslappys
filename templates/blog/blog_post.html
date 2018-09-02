@@ -1,0 +1,57 @@
+{% extends "paranoiaslappys/base.html" %}
+
+{% block content %}
+
+    <!-- Page Header -->
+    <header class="blog_title">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-md-12 mx-auto">
+                    <div class="post-heading">
+                        <h1>{{ blog.Title }}</h1>
+                        <span class="meta">Posted by
+                            <a href="#">{{ blog.Author }}</a>
+                            on {{ blog.Date }}
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!--SNS Share-->
+    <div class="container">
+        <div class="col-lg-8 col-md-12 mx-auto">
+            <a href="#" class="mx-2 icon_custom2">
+                <i class="fab fa-twitter fa-2x"></i>
+            </a>
+            <a href="#" class="mx-2 icon_custom2">
+                <i class="fab fa-facebook-f fa-2x ml-2"></i>
+            </a>
+            <a href="#" class="mx-2 icon_custom2">
+                <i class="fab fa-instagram fa-2x ml-2"></i>
+            </a>
+        </div>
+    </div>
+
+    <!--Post Content-->
+    <article>
+        <div class="container mt-4">
+            <div class="row">
+                <div class="col-lg-8 col-md-12 mx-auto">
+                    {% for paragraph in blog.blogparagraph_set.all %}
+                        <p>{{ paragraph.ParagraphText }}</p>
+                        {% if paragraph.ParagraphImage %}
+                            <div class="text-center">
+                                <img class="img-fluid rounded" src="{{ paragraph.ParagraphImage.url }}" alt="{{ paragraph.ParagraphImage.name }}" />
+                            </div>
+                        {% endif %}
+                        <br>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+    </article>
+    <br>
+
+{% endblock content %}

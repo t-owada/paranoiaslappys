@@ -1,33 +1,22 @@
 from django.db import models
 from datetime import datetime
+from django.utils import timezone
 
 
 class BlogData(models.Model):
     # Managing Blog Data
-    Title = models.CharField(max_length=255)
-    Author = models.CharField(max_length=255)
-    Date = models.DateField(default=datetime.now().date(), blank=True)
+    Title = models.CharField(max_length=255, null=False)
+    Author = models.CharField(max_length=255, null=False)
+    Date = models.DateField(null=False)
 
     def __str__(self):
         return self.Title
 
 
-# class BlogParagraph(models.Model):
-#     BlogData = models.ForeignKey(BlogData, related_name='BlogParagraphs', on_delete=models)
-#     Paragraph = models.TextField()
-#
-#     def __str__(self):
-#         # return_string = join(self.BlogData, ' Paragraph id :', self.id)
-#         # return return_string
-#         return self.id
-#
-#
-# class BlogImage(models.Model):
-#     BlogParagraph = models.ForeignKey(BlogParagraph, related_name='BlogImages', on_delete=models)
-#     Name = models.CharField(max_length=255)
-#     Image = models.ImageField(upload_to='img/')
-#
-#     def __str__(self):
-#         # return_string = join(self.BlogParagraph.BlogData, ' Paragraph id : ', self.BlogParagraph.id, ' Image id : ', self.id)
-#         # return return_string
-#         return self.id
+class BlogParagraph(models.Model):
+    BlogData = models.ForeignKey(BlogData, on_delete=models.CASCADE)
+    ParagraphText = models.TextField()
+    ParagraphImage = models.ImageField(null=True, blank=True, upload_to='img/%Y/%m/%d')
+
+    def __str__(self):
+        return 'blog title : 「' + str(self.BlogData) + '」, paragraph id :' + str(self.id)

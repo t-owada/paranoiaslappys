@@ -7,7 +7,7 @@
     <!--Page Title-->
     <div class="container mt-5">
         <div class="row">
-            <div class="page-top col-12 mx-auto">
+            <div class="page-top col-lg-8 col-md-12 mx-auto">
                 Blog
                 <hr>
             </div>
@@ -18,9 +18,9 @@
     <div class="container">
         <div class="row">
             {% for blog in blogs %}
-            <div class="col-12 mx-auto">
+            <div class=" col-lg-8 col-md-12 mx-auto">
                 <div class="post-preview">
-                    <a href="#">
+                    <a href="{% url 'blog:blog_post' blog.id %}">
                         <h2 class="post-title">
                             {{ blog.Title }}
                         </h2>
@@ -32,9 +32,8 @@
                 </div>
             </div>
             {% endfor %}
-            <hr>
             <!-- Pager -->
-            <div class="col-12 mx-auto">
+            <div class=" col-lg-8 col-md-12 mx-auto">
                 <div class="clearfix">
                     <a class="btn btn-custom float-right text-white" href="#">Older Posts &rarr;</a>
                 </div>
