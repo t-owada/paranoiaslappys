@@ -1,0 +1,44 @@
+{% extends "paranoiaslappys/base.html" %}
+
+{% block content %}
+
+    <br>
+
+    <!--Page Title-->
+    <div class="container mt-5">
+        <div class="row">
+            <div class="page-top col-lg-8 col-md-12 mx-auto">
+                Products
+                <hr>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <div class="container">
+        <div class="row">
+
+            {% for product in products %}
+
+                <div class=" col-lg-8 col-md-12 mx-auto">
+                    <a class="card card-body" href="#">
+                        <img class="card-img-top card-img_custom" src="{{ product.get_top_image }}" alt="{{ product.ProductName }}" />
+                        <div class="card-body">
+                            <h4 class="card-title">
+                                {{ product.ProductName }}
+                            </h4>
+                            <p class="card-text">
+                                {{ product.Description }}
+                            </p>
+                        </div>
+                    </a>
+                </div>
+
+            {% endfor %}
+
+        </div>
+    </div>
+
+
+
+{% endblock %}
