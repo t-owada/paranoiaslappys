@@ -8,7 +8,7 @@ class ImageInline(admin.StackedInline):
 
 
 class ProductDataAdmin(admin.ModelAdmin):
-    fields = ['ProductName', 'Description']
+    fields = ['ProductName', 'Description', 'Size', 'Price']
     inlines = [ImageInline]
 
 

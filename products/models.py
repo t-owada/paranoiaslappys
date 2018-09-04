@@ -6,6 +6,8 @@ from django.conf import settings
 class ProductData(models.Model):
     ProductName = models.CharField(max_length=255)
     Description = models.TextField()
+    Size = models.CharField(max_length=255)
+    Price = models.CharField(max_length=255)
 
     def __str__(self):
         return self.ProductName

@@ -12,7 +12,7 @@ class ProductsTopView(generic.ListView):
         return ProductData.objects.order_by('-id')[:6]
 
 
-# class BlogPostView(generic.DetailView):
-#     model = BlogData
-#     template_name = 'blog/blog_post.html'
-#     context_object_name = 'blog'
+class ProductDetailView(generic.DetailView):
+    model = ProductData
+    template_name = 'products/product_detail.html'
+    context_object_name = 'product'
