@@ -2,33 +2,23 @@
 
 {% block content %}
 
-    <br>
-    <br>
-
     <!-- Top Page -->
-    <header class="masthead_top-page">
-        <div class="container d-flex h-100 align-items-center">
-            <div class="mx-auto text-center">
-                <h1 class="text-white-50 mx-auto">{{ TopPageContent.CopyText }}</h1>
-                <p class="text-white-50 mx-auto mt-5 mb-5">
-                    {{ TopPageContent.MessageText }}
-                </p>
+    <div class="jumbotron jumbotron-fluid jumbotron-extend">
+        <div class="container-fluid jumbotron-container">
+            <h1 class="top_page-copy">{{ TopPageContent.CopyText }}</h1>
+            <p class="top_page-message mt-5">{{ TopPageContent.MessageText }}</p>
+            <div class="top-page-icon-container mt-5">
+              <a href="#" class="mx-2 top_page-icon">
+                <i class="fab fa-twitter fa-2x"></i>
+              </a>
+              <a href="#" class="mx-2 top_page-icon">
+                <i class="fab fa-facebook-f fa-2x ml-2"></i>
+              </a>
+              <a href="#" class="mx-2 top_page-icon">
+                <i class="fab fa-instagram fa-2x ml-2"></i>
+              </a>
             </div>
         </div>
-      <!--SNS Links-->
-      <div class="container">
-        <div class="social d-flex justify-content-center">
-          <a href="#" class="mx-2 icon_custom">
-            <i class="fab fa-twitter fa-2x"></i>
-          </a>
-          <a href="#" class="mx-2 icon_custom">
-            <i class="fab fa-facebook-f fa-2x ml-2"></i>
-          </a>
-          <a href="#" class="mx-2 icon_custom">
-            <i class="fab fa-instagram fa-2x ml-2"></i>
-          </a>
-        </div>
-      </div>
-    </header>
+    </div>
 
 {% endblock content %}

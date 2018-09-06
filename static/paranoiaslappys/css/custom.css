@@ -1,120 +1,94 @@
+/*All*/
 body.body-font {
-  font-family: 'Nunito', 'Hiragino Kaku Gothic ProN', 'Meiryo';
-  letter-spacing: 0.0625em;
+    font-family: 'Nunito', 'Hiragino Kaku Gothic ProN', 'Meiryo';
+    letter-spacing: 0.0625em;
 }
 
-#mainNav .navbar-brand_custom{
-    font-family: 'Impact';
-    font-size: 2.0rem;
-    font-weight: 400;
-    padding: .9rem 0;
-    /*-webkit-text-stroke: 2px #000;*/
+/*base.html*/
+.navbar-extent{
+    font-family: "Impact";
+    font-weight: bold  !important;
+    font-size: 1.5rem; !important;
 }
 
-#mainNav .nav-item_custom:hover {
-    color: #0d0d0d;
-    outline: none;
-    background-color: transparent;
+.footer {
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    /* Set the fixed height of the footer here */
+    height: 60px;
+    background-color: #343a40;
+    vertical-align: center;
 }
 
-#mainNav .nav-link_custom {
-    transition: none;
-    padding: 2rem 1.5rem;
-    color: white;
+body > .container {
+    padding: 60px 15px 0;
 }
 
-#mainNav .nav-link_custom:hover {
-    transition: none;
-    padding: 2rem 1.5rem;
-    color: gray;
+.container .text-muted {
+    margin: 0;
+    text-align: center;
 }
 
-#mainNav .navbar-toggler_custom {
-    font-size: 80%;
-    padding: 0.75rem;
-    color: white;
-    border: 1px solid white;
+.footer > .container {
+    padding-right: 15px;
+    padding-left: 15px;
+    padding-top: 15px;
 }
 
-.masthead_top-page{
+/*top_page.html*/
+.jumbotron-extend{
   position: relative;
-  width: 100%;
-  height: auto;
-  min-height: 35rem;
-  padding: 15rem 0;
-  background: linear-gradient(to bottom, rgba(22, 22, 22, 0.1) 0%, rgba(22, 22, 22, 0.5) 75%, #161616 100%),
-                url("/static/paranoiaslappys/img/top_page/top_page_back_ground.jpg");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-attachment: scroll;
+  height: 95vh;
+  background: url("/static/paranoiaslappys/img/top_page/top_page_back_ground.jpg") ;
   background-size: cover;
+  background-position: center;
+  margin-bottom: 0;
 }
 
-.masthead_top-page h1 {
-  font-family: 'Impact';
-  font-size: 3.0rem;
-  line-height: 2.5rem;
-  letter-spacing: 0.4rem;
-  color: white;
-  line-height: 4.0rem;
-  /*background: -webkit-linear-gradient(rgba(255, 255, 255, 2), rgba(255, 255, 255, 0));*/
-  /*-webkit-text-fill-color: transparent;*/
-  /*-webkit-background-clip: text;*/
+.jumbotron-container{
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
 }
 
-.masthead_top-page p {
-  font-family: 'Times New Roman';
-  max-width: 20rem;
-  font-size: 1rem;
+.top_page-copy{
+    color: white;
+    text-align: center;
+    font-family: 'Impact';
+    font-size: 50px;
 }
 
-.btn-custom {
-  background-color:#212121;
+.top_page-message{
+    color: white;
+    text-align: center;
 }
 
-.btn-custom:hover {
-  background-color: #3E4551;
+.top-page-icon-container{
+    text-align: center;
 }
 
-.btn-custom:focus {
-  background-color: #3E4551;
+.top_page-icon {
+  text-decoration: none;
   color: white;
 }
 
-
-footer.top-page {
-  padding: 5rem 0;
-  text-align: center;
-}
-
-a.icon_custom {
-  color: #bdbdbd;
-}
-
-a.icon_custom:focus, a:hover {
+.top_page-icon:hover {
   text-decoration: none;
-  color: #4B515D;
+  color: lightgray;
 }
 
-a.icon_custom2 {
-  color: #212121;
-}
-
-a.icon_custom2:focus, a:hover {
-  text-decoration: none;
-  color: #4B515D;
-}
-
-/*Page Top*/
+/*blog_top.html, blog_post.html*/
 .page-top{
-  font-size: 35px;
-  font-weight: bold;
-  margin-top: 30px;
-  margin-bottom: 5px;
+    font-size: 1.8rem;
+    font-weight: bold;
+    margin-top: 1rem;
 }
 
+.container-content{
+    padding-top: 1rem !important;
+}
 
-/* Blog top parts */
 .post-preview > a {
   color: #212529;
 }
@@ -125,9 +99,9 @@ a.icon_custom2:focus, a:hover {
 }
 
 .post-preview > a > .post-title {
-  font-size: 30px;
-  margin-top: 30px;
-  margin-bottom: 10px;
+  font-size: 1.5rem;
+  margin-top: 0;
+  margin-bottom: 0;
 }
 
 .post-preview > a > .post-subtitle {
@@ -152,18 +126,138 @@ a.icon_custom2:focus, a:hover {
   color: gray;
 }
 
+.btn-custom {
+    background-color:#212529;
+    color: #6c757d;
+}
+
+.btn-custom:hover {
+    background-color: #6c757d;
+}
+
 /*blog post parts*/
 .blog_title {
   position: relative;
   width: 100%;
   height: auto;
   min-height: 4rem;
-  margin-top: 8rem;
-  margin-bottom: 2rem;
+  margin-top: 6rem;
+  margin-bottom: 1rem;
   background-position: center;
   background-repeat: no-repeat;
   background-attachment: scroll;
 }
+
+.sns-icons {
+    padding-top: 0 !important;
+    padding-left: 0 !important;
+}
+
+a.icon {
+  color: #212121;
+}
+
+a.icon:hover {
+  text-decoration: none;
+  color: #6c757d;
+}
+
+/*#mainNav{*/
+    /*background-color: #0d0d0d;*/
+    /*height: 80px;*/
+/*}*/
+
+/*#mainNav .navbar-brand{*/
+    /*font-family: 'Impact';*/
+    /*color: white;*/
+    /*font-size: 2.0rem;*/
+    /*font-weight: 400;*/
+    /*padding: .9rem 0;*/
+/*}*/
+
+/*#mainNav .navbar-brand:hover{*/
+    /*color: lightgray;*/
+/*}*/
+
+/*#mainNav .nav-item:hover {*/
+    /*color: #0d0d0d;*/
+    /*outline: none;*/
+    /*background-color: transparent;*/
+/*}*/
+
+/*#mainNav .nav-link {*/
+    /*transition: none;*/
+    /*padding: 2rem 1.5rem;*/
+    /*color: white;*/
+/*}*/
+
+/*#mainNav .nav-link:hover {*/
+    /*transition: none;*/
+    /*padding: 2rem 1.5rem;*/
+    /*color: lightgray;*/
+/*}*/
+
+/*#mainNav .navbar-toggler {*/
+    /*font-size: 80%;*/
+    /*padding: 0.75rem;*/
+    /*color: white;*/
+    /*border: 1px solid white;*/
+/*}*/
+
+
+/*.top-page-content{*/
+    /*margin-top: 10vh;*/
+    /*background: url("/static/paranoiaslappys/img/top_page/top_page_back_ground.jpg");*/
+    /*background-size: cover;*/
+    /*background-position: center;*/
+    /*height: 550px;*/
+    /*display: flex;*/
+    /*align-items: center;*/
+    /*justify-content: center;*/
+/*}*/
+
+
+
+
+
+
+/*.footer-original{*/
+    /*background-color: #0d0d0d;*/
+    /*color: white;*/
+    /*height: 50px;*/
+    /*display: flex;*/
+    /*align-items: center;*/
+	/*justify-content: center;*/
+/*}*/
+
+
+/*以下削除対象*/
+
+
+.btn-custom:focus {
+  background-color: #3E4551;
+  color: white;
+}
+
+
+
+a.icon_custom {
+  color: #bdbdbd;
+}
+
+a.icon_custom:focus, a:hover {
+  text-decoration: none;
+  color: #4B515D;
+}
+
+
+
+
+
+
+
+
+
 
 /*Gallery Modal Window*/
 .modal-middle {
